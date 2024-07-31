@@ -1,0 +1,224 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;1932085164160&quot;));">
+
+ 
+
+<div id="1932085160992" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Predictions <span class="timestamp">Sun Jul 28 24, 16:47:14</span></h1><div class="content">
+<h2>Info</h2><p>Data:<br><nobr><b><u>test</u></b>: 9 instances, 27 variables</nobr><br><nobr>Features: 24 numeric (no missing values)</nobr><br><nobr>Target: numeric</nobr><br><nobr>Metas: 2 string</nobr></p><hr>Model: 1 model<ul><li>Tree (3)</li></ul><p></p><h2>Data &amp; Predictions</h2><table>
+  <tbody><tr>
+    <th></th><th>Tree (3)</th><th>error</th><th>Rating</th><th>Name</th><th>Sector</th><th>currentRatio</th><th>quickRatio</th><th>cashRatio</th><th>netProfitMargin</th><th>pretaxProfitMargin</th><th>grossProfitMargin</th><th>operatingProfitMargin</th><th>returnOnAssets</th><th>returnOnCapitalEmployed</th><th>returnOnEquity</th><th>assetTurnover</th><th>fixedAssetTurnover</th><th>debtEquityRatio</th><th>debtRatio</th><th>effectiveTaxRate</th><th>freeCashFlowOperatingCashFlowRatio</th><th>freeCashFlowPerShare</th><th>cashPerShare</th><th>companyEquityMultiplier</th><th>ebitPerRevenue</th><th>enterpriseValueMultiple</th><th>operatingCashFlowPerShare</th><th>operatingCashFlowSalesRatio</th><th>payablesTurnover</th></tr>
+  <tr>
+    <th>1</th><td>0.10 : 0.01 : 0.01 : 0.17 : 0.30 : 0.36 : 0.00 : 0.00 : 0.05 : 0.00 → BBB</td><td></td><td>?</td><td>Seagate Technology PLC</td><td>Technology</td><td>1.85533</td><td>1.34161</td><td>0.773029</td><td>0.0465773</td><td>0.00911494</td><td>0.195607</td><td>0.0734664</td><td>0.055393</td><td>0.0173551</td><td>0.207471</td><td>1.18927</td><td>4.88686</td><td>2.74543</td><td>0.733008</td><td>0.68</td><td>0.33307</td><td>0.933481</td><td>6.9867</td><td>3.74543</td><td>0.00911494</td><td>4.55089</td><td>2.80266</td><td>0.115213</td><td>4.27775</td></tr>
+  <tr>
+    <th>2</th><td>0.23 : 0.04 : 0.00 : 0.10 : 0.24 : 0.38 : 0.00 : 0.00 : 0.01 : 0.00 → BBB</td><td></td><td>?</td><td>Cadence Design Systems, Inc.</td><td>Technology</td><td>1.32923</td><td>0.734055</td><td>0.669131</td><td>0.100509</td><td>0.114491</td><td>1</td><td>0.13071</td><td>0.0495078</td><td>0.113762</td><td>0.119152</td><td>0.49257</td><td>6.87027</td><td>1.40673</td><td>0.584499</td><td>0.12212</td><td>0.874306</td><td>0.977282</td><td>3.609</td><td>2.40673</td><td>0.13071</td><td>14.0924</td><td>1.11778</td><td>0.200339</td><td>0</td></tr>
+  <tr>
+    <th>3</th><td>0.42 : 0.14 : 0.01 : 0.01 : 0.11 : 0.31 : 0.00 : 0.00 : 0.00 : 0.00 → A</td><td></td><td>?</td><td>Visa Inc.</td><td>Miscellaneous</td><td>2.0268</td><td>1.26461</td><td>0.654633</td><td>0.455908</td><td>0.451801</td><td>1</td><td>0.653026</td><td>0.157272</td><td>0.179881</td><td>0.21205</td><td>0.344965</td><td>7.35169</td><td>0.348301</td><td>0.258326</td><td>0.425291</td><td>0.93712</td><td>3.15763</td><td>3.04452</td><td>1.3483</td><td>0.451801</td><td>11.9231</td><td>3.3695</td><td>0.474352</td><td>0</td></tr>
+  <tr>
+    <th>4</th><td>0.23 : 0.04 : 0.00 : 0.10 : 0.24 : 0.38 : 0.00 : 0.00 : 0.01 : 0.00 → BBB</td><td></td><td>?</td><td>Select Medical Holdings Corporation</td><td>Health Care</td><td>1.22308</td><td>1.06491</td><td>0.0116251</td><td>0.038442</td><td>0.0664733</td><td>0.161367</td><td>0.101301</td><td>0.0405981</td><td>0.0808639</td><td>0.145491</td><td>1.05608</td><td>5.8449</td><td>2.58369</td><td>0.720958</td><td>0.378117</td><td>0.617396</td><td>0.86838</td><td>0.0315534</td><td>3.58369</td><td>0.0664733</td><td>7.86952</td><td>1.40652</td><td>0.0646995</td><td>28.2661</td></tr>
+  <tr>
+    <th>5</th><td>0.23 : 0.03 : 0.00 : 0.07 : 0.21 : 0.45 : 0.00 : 0.00 : 0.01 : 0.00 → BBB</td><td></td><td>?</td><td>Graham Holdings Company</td><td>Consumer Services</td><td>1.82247</td><td>1.7369</td><td>0.609906</td><td>0.0679112</td><td>0.086364</td><td>1</td><td>0.0990764</td><td>0.0407612</td><td>0.0617654</td><td>0.0717758</td><td>0.600213</td><td>3.76033</td><td>0.760887</td><td>0.432104</td><td>0.365174</td><td>0.316506</td><td>14.337</td><td>164.935</td><td>1.76089</td><td>0.086364</td><td>4.41148</td><td>45.2976</td><td>0.0940014</td><td>0</td></tr>
+  <tr>
+    <th>6</th><td>0.00 : 0.00 : 0.00 : 0.50 : 0.50 : 0.00 : 0.00 : 0.00 : 0.00 : 0.00 → B</td><td></td><td>?</td><td>The ONE Enterprise Public Company Limited</td><td>Communication Services</td><td>2.09</td><td>1.68</td><td>0.76</td><td>0.08</td><td>0.1</td><td>0.38</td><td>0.09</td><td>0.05</td><td>0.08</td><td>0.07</td><td>0.68</td><td>8.63</td><td>0.01</td><td>0.01</td><td>0.22</td><td>0.66</td><td>0.17</td><td>0.74</td><td>1.33</td><td>0.09</td><td>4.36</td><td>0.26</td><td>0.1</td><td>8.09</td></tr>
+  <tr>
+    <th>7</th><td>0.00 : 0.00 : 0.00 : 0.25 : 0.00 : 0.75 : 0.00 : 0.00 : 0.00 : 0.00 → BBB</td><td></td><td>?</td><td>BP p.l.c.</td><td>Energy</td><td>1.07575</td><td>0.767303</td><td>0.169874</td><td>0.0652795</td><td>0.097953</td><td>0.177724</td><td>0.102914</td><td>0.0860751</td><td>0.186287</td><td>0.225979</td><td>1.31856</td><td>2.12508</td><td>1.61625</td><td>0.615629</td><td>0.333562</td><td>0.348546</td><td>0.411992</td><td>0.782541</td><td>2.62537</td><td>0.101026</td><td>16.5475</td><td>1.18203</td><td>0.0575274</td><td>5.75173</td></tr>
+  <tr>
+    <th>8</th><td>0.10 : 0.01 : 0.01 : 0.17 : 0.30 : 0.36 : 0.00 : 0.00 : 0.05 : 0.00 → BBB</td><td></td><td>?</td><td>Costco Wholesale Corporation</td><td>Consumer Services</td><td>1.22037</td><td>0.503122</td><td>0.39814</td><td>0.0182706</td><td>0.0283825</td><td>0.125906</td><td>0.0285866</td><td>0.0623183</td><td>0.171771</td><td>0.167276</td><td>3.41085</td><td>7.59541</td><td>1.68422</td><td>0.627453</td><td>0.346888</td><td>0.499749</td><td>4.53848</td><td>16.2916</td><td>2.68422</td><td>0.0283825</td><td>13.0744</td><td>9.08152</td><td>0.0353693</td><td>11.5956</td></tr>
+  <tr>
+    <th>9</th><td>0.00 : 0.00 : 0.00 : 0.62 : 0.16 : 0.06 : 0.00 : 0.00 : 0.16 : 0.00 → B</td><td></td><td>?</td><td>Nokia Corporation</td><td>Technology</td><td>1.51296</td><td>1.16769</td><td>0.695226</td><td>-0.0500649</td><td>-0.0303247</td><td>0.360974</td><td>0.027013</td><td>-0.0257137</td><td>-0.0286012</td><td>-0.09714</td><td>0.513607</td><td>10.7617</td><td>2.61371</td><td>0.691869</td><td>-0.650964</td><td>0.787135</td><td>0.179708</td><td>2.77573</td><td>3.77775</td><td>-0.0303247</td><td>-17.8877</td><td>0.228307</td><td>0.0555195</td><td>2.23964</td></tr>
+</tbody></table><h2>Scores</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Model</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MSE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">RMSE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MAE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MAPE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">R2</th>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="1932085160560" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Predictions <span class="timestamp">Sun Jul 28 24, 16:48:12</span></h1><div class="content">
+<h2>Info</h2><p>Data:<br><nobr><b><u>test</u></b>: 9 instances, 27 variables</nobr><br><nobr>Features: 24 numeric (no missing values)</nobr><br><nobr>Target: numeric</nobr><br><nobr>Metas: 2 string</nobr></p><hr>Model: 1 model<ul><li>Random Forest (1)</li></ul><p></p><h2>Data &amp; Predictions</h2><table>
+  <tbody><tr>
+    <th></th><th>Random Forest (1)</th><th>error</th><th>Rating</th><th>Name</th><th>Sector</th><th>currentRatio</th><th>quickRatio</th><th>cashRatio</th><th>netProfitMargin</th><th>pretaxProfitMargin</th><th>grossProfitMargin</th><th>operatingProfitMargin</th><th>returnOnAssets</th><th>returnOnCapitalEmployed</th><th>returnOnEquity</th><th>assetTurnover</th><th>fixedAssetTurnover</th><th>debtEquityRatio</th><th>debtRatio</th><th>effectiveTaxRate</th><th>freeCashFlowOperatingCashFlowRatio</th><th>freeCashFlowPerShare</th><th>cashPerShare</th><th>companyEquityMultiplier</th><th>ebitPerRevenue</th><th>enterpriseValueMultiple</th><th>operatingCashFlowPerShare</th><th>operatingCashFlowSalesRatio</th><th>payablesTurnover</th></tr>
+  <tr>
+    <th>1</th><td>0.16 : 0.02 : 0.00 : 0.13 : 0.29 : 0.36 : 0.00 : 0.00 : 0.04 : 0.00 → BBB</td><td></td><td>?</td><td>Seagate Technology PLC</td><td>Technology</td><td>1.85533</td><td>1.34161</td><td>0.773029</td><td>0.0465773</td><td>0.00911494</td><td>0.195607</td><td>0.0734664</td><td>0.055393</td><td>0.0173551</td><td>0.207471</td><td>1.18927</td><td>4.88686</td><td>2.74543</td><td>0.733008</td><td>0.68</td><td>0.33307</td><td>0.933481</td><td>6.9867</td><td>3.74543</td><td>0.00911494</td><td>4.55089</td><td>2.80266</td><td>0.115213</td><td>4.27775</td></tr>
+  <tr>
+    <th>2</th><td>0.25 : 0.05 : 0.00 : 0.08 : 0.21 : 0.38 : 0.00 : 0.00 : 0.02 : 0.00 → BBB</td><td></td><td>?</td><td>Cadence Design Systems, Inc.</td><td>Technology</td><td>1.32923</td><td>0.734055</td><td>0.669131</td><td>0.100509</td><td>0.114491</td><td>1</td><td>0.13071</td><td>0.0495078</td><td>0.113762</td><td>0.119152</td><td>0.49257</td><td>6.87027</td><td>1.40673</td><td>0.584499</td><td>0.12212</td><td>0.874306</td><td>0.977282</td><td>3.609</td><td>2.40673</td><td>0.13071</td><td>14.0924</td><td>1.11778</td><td>0.200339</td><td>0</td></tr>
+  <tr>
+    <th>3</th><td>0.33 : 0.08 : 0.00 : 0.05 : 0.16 : 0.37 : 0.00 : 0.00 : 0.01 : 0.00 → BBB</td><td></td><td>?</td><td>Visa Inc.</td><td>Miscellaneous</td><td>2.0268</td><td>1.26461</td><td>0.654633</td><td>0.455908</td><td>0.451801</td><td>1</td><td>0.653026</td><td>0.157272</td><td>0.179881</td><td>0.21205</td><td>0.344965</td><td>7.35169</td><td>0.348301</td><td>0.258326</td><td>0.425291</td><td>0.93712</td><td>3.15763</td><td>3.04452</td><td>1.3483</td><td>0.451801</td><td>11.9231</td><td>3.3695</td><td>0.474352</td><td>0</td></tr>
+  <tr>
+    <th>4</th><td>0.11 : 0.01 : 0.00 : 0.26 : 0.33 : 0.25 : 0.00 : 0.00 : 0.02 : 0.00 → BB</td><td></td><td>?</td><td>Select Medical Holdings Corporation</td><td>Health Care</td><td>1.22308</td><td>1.06491</td><td>0.0116251</td><td>0.038442</td><td>0.0664733</td><td>0.161367</td><td>0.101301</td><td>0.0405981</td><td>0.0808639</td><td>0.145491</td><td>1.05608</td><td>5.8449</td><td>2.58369</td><td>0.720958</td><td>0.378117</td><td>0.617396</td><td>0.86838</td><td>0.0315534</td><td>3.58369</td><td>0.0664733</td><td>7.86952</td><td>1.40652</td><td>0.0646995</td><td>28.2661</td></tr>
+  <tr>
+    <th>5</th><td>0.22 : 0.04 : 0.01 : 0.09 : 0.22 : 0.41 : 0.00 : 0.00 : 0.02 : 0.00 → BBB</td><td></td><td>?</td><td>Graham Holdings Company</td><td>Consumer Services</td><td>1.82247</td><td>1.7369</td><td>0.609906</td><td>0.0679112</td><td>0.086364</td><td>1</td><td>0.0990764</td><td>0.0407612</td><td>0.0617654</td><td>0.0717758</td><td>0.600213</td><td>3.76033</td><td>0.760887</td><td>0.432104</td><td>0.365174</td><td>0.316506</td><td>14.337</td><td>164.935</td><td>1.76089</td><td>0.086364</td><td>4.41148</td><td>45.2976</td><td>0.0940014</td><td>0</td></tr>
+  <tr>
+    <th>6</th><td>0.18 : 0.09 : 0.00 : 0.25 : 0.19 : 0.26 : 0.00 : 0.00 : 0.03 : 0.00 → BBB</td><td></td><td>?</td><td>The ONE Enterprise Public Company Limited</td><td>Communication Services</td><td>2.09</td><td>1.68</td><td>0.76</td><td>0.08</td><td>0.1</td><td>0.38</td><td>0.09</td><td>0.05</td><td>0.08</td><td>0.07</td><td>0.68</td><td>8.63</td><td>0.01</td><td>0.01</td><td>0.22</td><td>0.66</td><td>0.17</td><td>0.74</td><td>1.33</td><td>0.09</td><td>4.36</td><td>0.26</td><td>0.1</td><td>8.09</td></tr>
+  <tr>
+    <th>7</th><td>0.20 : 0.04 : 0.00 : 0.09 : 0.21 : 0.41 : 0.03 : 0.00 : 0.02 : 0.00 → BBB</td><td></td><td>?</td><td>BP p.l.c.</td><td>Energy</td><td>1.07575</td><td>0.767303</td><td>0.169874</td><td>0.0652795</td><td>0.097953</td><td>0.177724</td><td>0.102914</td><td>0.0860751</td><td>0.186287</td><td>0.225979</td><td>1.31856</td><td>2.12508</td><td>1.61625</td><td>0.615629</td><td>0.333562</td><td>0.348546</td><td>0.411992</td><td>0.782541</td><td>2.62537</td><td>0.101026</td><td>16.5475</td><td>1.18203</td><td>0.0575274</td><td>5.75173</td></tr>
+  <tr>
+    <th>8</th><td>0.15 : 0.02 : 0.00 : 0.14 : 0.31 : 0.36 : 0.00 : 0.00 : 0.02 : 0.00 → BBB</td><td></td><td>?</td><td>Costco Wholesale Corporation</td><td>Consumer Services</td><td>1.22037</td><td>0.503122</td><td>0.39814</td><td>0.0182706</td><td>0.0283825</td><td>0.125906</td><td>0.0285866</td><td>0.0623183</td><td>0.171771</td><td>0.167276</td><td>3.41085</td><td>7.59541</td><td>1.68422</td><td>0.627453</td><td>0.346888</td><td>0.499749</td><td>4.53848</td><td>16.2916</td><td>2.68422</td><td>0.0283825</td><td>13.0744</td><td>9.08152</td><td>0.0353693</td><td>11.5956</td></tr>
+  <tr>
+    <th>9</th><td>0.04 : 0.01 : 0.00 : 0.30 : 0.35 : 0.20 : 0.00 : 0.01 : 0.08 : 0.00 → BB</td><td></td><td>?</td><td>Nokia Corporation</td><td>Technology</td><td>1.51296</td><td>1.16769</td><td>0.695226</td><td>-0.0500649</td><td>-0.0303247</td><td>0.360974</td><td>0.027013</td><td>-0.0257137</td><td>-0.0286012</td><td>-0.09714</td><td>0.513607</td><td>10.7617</td><td>2.61371</td><td>0.691869</td><td>-0.650964</td><td>0.787135</td><td>0.179708</td><td>2.77573</td><td>3.77775</td><td>-0.0303247</td><td>-17.8877</td><td>0.228307</td><td>0.0555195</td><td>2.23964</td></tr>
+</tbody></table><h2>Scores</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">Model</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MSE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">RMSE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MAE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">MAPE</th>
+<th style="color:black; background:transparent; text-align:left; vertical-align:middle;">R2</th>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="1932085156240" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Tree <span class="timestamp">Sun Jul 28 24, 16:49:14</span></h1><div class="content">
+<ul><b>Name:</b> Tree (3)<br></ul><h2>Model parameters</h2><ul><b>Pruning:</b> at least 3 instances in leaves, at least 5 instances in internal nodes, maximum depth 100<br><b>Splitting:</b> Stop splitting when majority reaches 95% (classification only)<br><b>Binary trees:</b> Yes<br></ul><h2>Data</h2><ul><b>Data instances:</b> 2020<br><b>Features:</b> Sector, currentRatio, quickRatio, cashRatio, netProfitMargin, pretaxProfitMargin, grossProfitMargin, operatingProfitMargin, returnOnAssets, returnOnCapitalEmployed, returnOnEquity, assetTurnover, fixedAssetTurnover, debtEquityRatio, debtRatio, effectiveTaxRate, freeCashFlowOperatingCashFlowRatio, freeCashFlowPerShare, cashPerShare, companyEquityMultiplier, ebitPerRevenue, enterpriseValueMultiple, operatingCashFlowPerShare, operatingCashFlowSalesRatio, payablesTurnover (total: 25 features)<br><b>Target:</b> Rating<br></ul></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="1932085164160" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Test and Score <span class="timestamp">Sun Jul 28 24, 16:49:24</span></h1><div class="content">
+</div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
